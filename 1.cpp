@@ -2,7 +2,7 @@
 #include<string.h>
 using namespace std;
 int main(){
-    int a=12;
+    int a=9;
     int b=0;
     try{
         if(b==0){
@@ -12,9 +12,8 @@ int main(){
             cout << "Divide : " << a/b << endl;
         }
     }
-    catch(int n){
-        cout << "Cannot divide by zero : " << n;
+    catch(int c){
+        cout << "Cannot divide by zero : " << c;
     }
-
     return 0;
 }
