@@ -1,15 +1,14 @@
 #include<iostream>
-#include<string.h>
 using namespace std;
 int main(){
-    char password[50];
+    char password[20];
     int a;
     int counta;
     cout<<"Enter your password in uppercase : ";
     cin>>password;
     char errorsentence[20] = "Not valid password";
 	try{
-	    for (a = 0; a < 50; a++){
+	    for (a = 0; a < 20; a++){
             if(password[a]>='A' && password[a]<='Z')
             {
                 counta=1;
