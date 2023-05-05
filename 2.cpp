@@ -1,20 +1,20 @@
 #include<iostream>
-#include<string.h>
 using namespace std;
 int main(){
     int age;
-    cout<<"What is your age? => ";
+    cout<<"Enter your age: ";
     cin >> age;
     try{
         if(age<18){
             throw age;
         }
 		else{
-            cout<<"You are eligible to vote."<<endl;
+            cout<<"You can vote."<<endl;
         }
     }
 	catch(int n){
-        cout<<"You cannot vote , you are less than 18 years old.";
+        cout<<"You cannot vote."<<endl;
+        cout<<"Only age equal or above 18 can vote and your age is "<<n<<" therefore you cannot vote."<<endl;
     }
     return 0;
 }
