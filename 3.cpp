@@ -4,19 +4,28 @@ using namespace std;
 int main(){
     char password[50];
     int a;
+    int counta;
     cout<<"Enter your password in uppercase : ";
     cin>>password;
+    char errorsentence[20] = "Not valid password";
 	try{
-	for (a = 0; a <= 50; a++){
-        if (isupper(password[a]) == 1 ){
-            goto y;			
-        }if (a == 50){
-           throw password;           
+	    for (a = 0; a < 50; a++){
+            if(password[a]>='A' && password[a]<='Z')
+            {
+                counta=1;
+            }
         }
-    }
-	y:
-	cout<<"Your password is valid.";	
+        if(counta==1){
+            cout<<"Password is valid";
+        }
+        else{
+            throw errorsentence;
+        }
 	}
+    catch(char errorsentence[20])
+    {
+        cout<<errorsentence<<endl;
+    }
 	catch(...){
 	 	cout<<"Try again , Enter valid password.";
 	}
